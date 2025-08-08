@@ -1,0 +1,128 @@
+.navbar {
+  width: 90%;                 /* not full width, so some breathing room */
+  max-width: 1200px;
+  height: 100px;
+  background-color: #456882;
+  display: flex;
+  flex-direction: row;
+  border-radius: 20px;        /* slightly rounder corners */
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;         /* more padding left/right for space from edges */
+  margin: 20px auto;          /* centers horizontally with vertical margin */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* subtle shadow for better pop */
+  box-sizing: border-box;     /* make sure padding included in width */
+}
+
+.navbar .leftSide {
+  flex: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;         /* reduced from 150px, more balanced */
+}
+
+.navbar .leftSide img {
+  width: 70px;
+  border-radius: 12px;        /* subtle rounding on logo */
+}
+
+.navbar .rightSide {
+  flex: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;                 /* spacing between links & buttons */
+  padding-right: 50px;       /* space from right edge */
+}
+
+.navbar a {
+  color: #1B3C53;
+  text-decoration: none;
+  margin: 0 15px;            /* less vertical margin, more horizontal */
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.navbar .rightSide button {
+  background-color: transparent;
+  border: none;
+  color: #1B3C53;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;        /* round button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.navbar .rightSide button:hover {
+  background-color: rgba(255,255,255,0.2);
+}
+
+.navbar .rightSide svg {
+  font-size: 36px;
+}
+
+.navbar #open {
+  padding-left: 0;
+}
+
+.navbar #open img {
+  display: none;
+}
+
+.navbar #close img {
+  display: inherit;
+}
+
+.navbar #open .hiddenLinks {
+  display: inherit;
+  margin-left: 30px;
+}
+
+.navbar #close .hiddenLinks {
+  display: none;
+}
+
+.navbar #open a {
+  width: 70px;
+  margin: 5px;
+}
+
+/* Responsive tweaks */
+@media only screen and (max-width: 900px) {
+  .navbar .rightSide a {
+    width: 70px;
+  }
+  .navbar .leftSide {
+    padding-left: 30px;       /* smaller padding on smaller screens */
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar .rightSide a {
+    display: none;
+  }
+
+  .navbar .rightSide {
+    justify-content: flex-end;
+    padding-right: 30px;
+  }
+
+  .navbar .rightSide button {
+    display: inherit;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar .rightSide button {
+    display: none;
+  }
+
+  .hiddenLinks {
+    display: none;
+  }
+}
