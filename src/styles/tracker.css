@@ -64,3 +64,77 @@ border: 2px solid #bb7c54;
     background-color: #bb7c54;
     color: white;
 }
+#trackButton{
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #333;
+    background-color: #bb7c54;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#trackButton:hover{
+    background-color: #456882;
+    color: black;
+}
+/* Pentru ecrane mici (max-width: 600px) - mobile */
+@media (max-width: 600px) {
+  body {
+    height: auto; /* să nu forțezi 100vh pe mobil */
+    padding: 10px;
+  }
+
+  #title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  #subtitle {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+
+  #calendar {
+    justify-content: center; /* să fie centrat pe mobil */
+  }
+
+  #calendarDiv {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .days {
+    flex-wrap: wrap; /* să sară pe linia următoare dacă nu încape */
+  }
+
+  .day {
+    width: 25px; /* mai mic pe mobil */
+    padding: 8px;
+    font-size: 12px;
+    margin: 2px;
+  }
+
+  #trackButton {
+    width: 100%;
+    font-size: 14px;
+    padding: 12px 0;
+  }
+}
+
+/* Pentru tablete (min-width: 601px și max-width: 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  #title {
+    font-size: 1.8rem;
+  }
+
+  #subtitle {
+    font-size: 1.1rem;
+  }
+
+  .day {
+    width: 28px;
+    padding: 9px;
+    font-size: 14px;
+  }
+}

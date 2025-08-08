@@ -1,5 +1,5 @@
 .navbar {
-  width: 90%;                 /* not full width, so some breathing room */
+  width: 70%;                 /* not full width, so some breathing room */
   max-width: 1200px;
   height: 100px;
   background-color: #456882;
@@ -10,7 +10,7 @@
   align-items: center;
   padding: 10px 40px;         /* more padding left/right for space from edges */
   margin: 20px auto;          /* centers horizontally with vertical margin */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* subtle shadow for better pop */
+ margin-top: 0px;
   box-sizing: border-box;     /* make sure padding included in width */
 }
 
@@ -19,7 +19,7 @@
   height: 100%;
   display: flex;
   align-items: center;
-  padding-left: 50px;         /* reduced from 150px, more balanced */
+  padding-left: 20px;         /* reduced from 150px, more balanced */
 }
 
 .navbar .leftSide img {
@@ -34,7 +34,7 @@
   align-items: center;
   justify-content: center;
   gap: 20px;                 /* spacing between links & buttons */
-  padding-right: 50px;       /* space from right edge */
+  padding-right: 20px;       /* space from right edge */
 }
 
 .navbar a {
@@ -43,6 +43,15 @@
   margin: 0 15px;            /* less vertical margin, more horizontal */
   font-weight: 600;
   font-size: 1rem;
+}
+.navbar a:hover {
+  color: #F0F0F0;  
+  border: 50px;
+  width: 200px;
+
+  background-color: #1B3C53; /* subtle hover effect */
+  border-radius: 10px ;    
+  border-color: #1B3C53;      /* lighter color on hover */
 }
 
 .navbar .rightSide button {
@@ -55,11 +64,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.2s ease;
+    transition: transform 0.3s ease;
 }
 
 .navbar .rightSide button:hover {
   background-color: rgba(255,255,255,0.2);
+    transform: scale(0.9);
 }
 
 .navbar .rightSide svg {
