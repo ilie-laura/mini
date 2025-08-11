@@ -4,7 +4,7 @@ import '../styles/tracker.css';
 import { useEffect } from 'react';
 import track from '../assets/scripts/track.js';
 import Habit from '../assets/scripts/habit.js';
-import Time from '../assets/time.js';
+import Time from '../assets/scripts/time.js';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import StreakDisplay from '../assets/scripts/check/uncheck.js';
 import Reset from '../assets/scripts/reset.js';

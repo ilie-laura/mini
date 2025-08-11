@@ -24,7 +24,9 @@ function Navbar() {
              <Link to="/">Home</Link>
              <Link to="/about">About</Link>
              <Link to="/contact">Contact</Link>
+             <Link to="/Snake">Snake</Link>
              <Link to="/Tracker">Tracker</Link>
+             <Link to="/XAndO">XAndO</Link>
     <button onClick={() => toggleNavbar()}>
         <ReorderIcon/>
     </button>
